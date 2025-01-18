@@ -3,3 +3,13 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    color: black;
+}
+
+div {
+    border: 1px solid blue;
+    padding: 20px;
+    margin: 20px;
+}
