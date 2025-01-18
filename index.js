@@ -1,3 +1,13 @@
+let num1;
+let num2;
+
+let add = '+';
+let subtract = '-';
+let multiply = '*';
+let divide = '/';
+
+
+
 function addition(num1, num2) {
     return num1 + num2;
 }
@@ -16,7 +26,4 @@ function division(num1, num2) {
     }
     return num1 / num2;
 }
-
-let num1;
-let num2;
 
