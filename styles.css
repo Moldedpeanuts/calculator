@@ -38,7 +38,6 @@ div {
     background-color: rgb(93 152 170);
     height: 400px;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     gap: 13px;
     padding: 10px;
@@ -57,4 +56,8 @@ div {
     width: 90px;
     height: 60px;
     border-radius: 15px;
+}
+
+.containerButtons button:nth-child(17) {
+    flex: auto;
 }
