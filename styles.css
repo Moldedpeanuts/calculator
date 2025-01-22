@@ -59,6 +59,8 @@ div {
     border-radius: 15px;
     border: 5px solid rgb(30, 50, 55);
     background-color: rgb(224, 234, 238);
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .containerButtons button:nth-child(17) {
