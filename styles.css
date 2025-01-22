@@ -25,5 +25,10 @@ div {
     width: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    background-color: rgb(93 152 170);
+}
+
+.display {
+    background-color: rgb(224, 234, 238);
 }
