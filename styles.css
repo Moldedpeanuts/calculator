@@ -31,7 +31,7 @@ div {
 .display {
     background-color: rgb(224, 234, 238);
     padding: 55px;
-    border: 6px solid blue;
+    border: 6px solid rgb(30, 50, 55);
 }
 
 .containerButtons {
@@ -56,6 +56,7 @@ div {
     width: 90px;
     height: 60px;
     border-radius: 15px;
+    border: 5px solid rgb(30, 50, 55)
 }
 
 .containerButtons button:nth-child(17) {
