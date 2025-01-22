@@ -29,9 +29,13 @@ div {
 }
 
 .display {
-    background-color: rgb(224, 234, 238);
-    padding: 55px;
+    background-color: rgb(200, 225, 240);
+    padding: 33px;
     border: 6px solid rgb(30, 50, 55);
+    font-size: 40px;
+    font-weight: 600;
+    color: rgb(30, 50, 55);
+    text-align: right;
 }
 
 .containerButtons {
