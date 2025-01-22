@@ -61,8 +61,13 @@ div {
     background-color: rgb(224, 234, 238);
     font-size: 20px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .containerButtons button:nth-child(17) {
     flex: auto;
+}
+
+.containerButtons button:hover {
+    background-color: rgb(184, 204, 208);
 }
