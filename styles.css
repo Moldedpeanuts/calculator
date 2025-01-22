@@ -30,7 +30,7 @@ div {
 
 .display {
     background-color: rgb(224, 234, 238);
-    padding: 40px;
+    padding: 55px;
     border: 6px solid blue;
 }
 
@@ -40,7 +40,7 @@ div {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 17px;
+    gap: 13px;
     padding: 10px;
 
 }
