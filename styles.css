@@ -43,5 +43,6 @@ div {
     color: rgb(30, 50, 55);
     align-self: flex-end;
     font-size: 15px;
-    padding: 0 25px;
+    padding: 0 40px;
+    margin: -15px;
 }
