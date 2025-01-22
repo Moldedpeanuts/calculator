@@ -33,3 +33,8 @@ div {
     background-color: rgb(224, 234, 238);
     padding: 40px;
 }
+
+.containerButtons {
+    background-color: rgb(93 152 170);
+    height: 400px;
+};
