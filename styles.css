@@ -50,6 +50,7 @@ div {
     font-size: 15px;
     padding: 0 40px;
     margin: -15px;
+    font-weight: 600;
 }
 
 .containerButtons button {
