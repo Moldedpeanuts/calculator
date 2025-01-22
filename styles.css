@@ -38,6 +38,12 @@ div {
 .containerButtons {
     background-color: rgb(93 152 170);
     height: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 10px;
+
 }
 
 .trademark {
@@ -46,4 +52,10 @@ div {
     font-size: 15px;
     padding: 0 40px;
     margin: -15px;
+}
+
+.containerButtons button {
+    width: 90px;
+    height: 60px;
+    border-radius: 15px;
 }
