@@ -44,3 +44,10 @@ function operate(num1, num2, operator) {
 }
 
 
+
+// Creating a buttonsDigit object that contains references to all digit buttons
+
+const buttonsDigit = document.querySelectorAll('.digit');
+
+buttonsDigit = Array.from(buttonsDigit);  // now buttonsDigits is a true Array
+
