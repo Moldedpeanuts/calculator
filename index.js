@@ -55,7 +55,7 @@ buttonsDigit = buttonsDigit.reduce((acc, button) => {
         acc[button.id] = button;
 
         return acc;
-    }, {});
+}, {});
 
 
 // Creating a link to display div
@@ -64,7 +64,7 @@ const display = document.querySelector('.display');
 
 // loop over object and attach Event Listeners to each digit button
 
-for(button in buttonsDigit) {
+for(let button in buttonsDigit) {
     buttonsDigit[button].addEventListener('click', () => {
         display.textContent += buttonsDigit[button].textContent;
     });
