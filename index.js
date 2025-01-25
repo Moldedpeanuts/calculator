@@ -51,14 +51,21 @@ let buttonsDigit = document.querySelectorAll('.digit');
 
 buttonsDigit = Array.from(buttonsDigit);  // now buttonsDigits is a true Array
 
-buttonsDigit.reduce((acc, button) => {
-    acc[button.id] = button;
+buttonsDigit = buttonsDigit.reduce((acc, button) => {
+        acc[button.id] = button;
 
-    return acc;
-}, {});
+        return acc;
+    }, {});
 
 
 // Creating a link to display div
 
 const display = document.querySelector('.display');
 
+// loop over object and attach Event Listeners to each digit button
+
+for(button in buttonsDigit) {
+    buttonsDigit[button].addEventListener('click', () => {
+        display.textContent += buttonsDigit[button].textContent;
+    });
+}
