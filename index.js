@@ -51,3 +51,8 @@ const buttonsDigit = document.querySelectorAll('.digit');
 
 buttonsDigit = Array.from(buttonsDigit);  // now buttonsDigits is a true Array
 
+buttonsDigit.reduce((digitsObject, button) => {
+    digitsObject[button.id] = button;
+
+    return digitsObject;
+}, {});
