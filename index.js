@@ -56,3 +56,9 @@ buttonsDigit.reduce((acc, button) => {
 
     return acc;
 }, {});
+
+
+// Creating a link to display div
+
+const display = document.querySelector('.display');
+
