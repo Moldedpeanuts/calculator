@@ -64,8 +64,13 @@ const display = document.querySelector('.display');
 
 // loop over object and attach Event Listeners to each digit button
 
+let totalNumber;
+
 for(let button in buttonsDigit) {
     buttonsDigit[button].addEventListener('click', () => {
         display.textContent += buttonsDigit[button].textContent;
+
+        totalNumber = display.textContent;
     });
 }
+
