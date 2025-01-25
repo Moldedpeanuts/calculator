@@ -47,12 +47,12 @@ function operate(num1, num2, operator) {
 
 // Creating a buttonsDigit object that contains references to all digit buttons
 
-const buttonsDigit = document.querySelectorAll('.digit');
+let buttonsDigit = document.querySelectorAll('.digit');
 
 buttonsDigit = Array.from(buttonsDigit);  // now buttonsDigits is a true Array
 
-buttonsDigit.reduce((digitsObject, button) => {
-    digitsObject[button.id] = button;
+buttonsDigit.reduce((acc, button) => {
+    acc[button.id] = button;
 
-    return digitsObject;
+    return acc;
 }, {});
