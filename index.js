@@ -1,4 +1,4 @@
-let num1;
+let num1;  // declared globally to access later
 let num2;
 
 let add = '+';
@@ -42,3 +42,5 @@ function operate(num1, num2, operator) {
         return division(num1, num2)
     }
 }
+
+
