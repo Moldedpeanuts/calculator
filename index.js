@@ -72,3 +72,13 @@ for(let button in buttonsDigit) {
 
 // Symbol buttons logic: handling operations between numbers
 
+let buttonsSymbol = document.querySelectorAll('.symbol');
+
+buttonsSymbol = Array.from(buttonsSymbol); // convert NodeList to true Array
+
+buttonsSymbol = buttonsSymbol.reduce((acc, button) => {
+        acc[button.id] = button;
+
+        return acc;
+}, {});
+
