@@ -45,13 +45,13 @@ function operate(num1, num2, operator) {
 
 
 
-// Creating a buttonsDigit object that contains references to all digit buttons
+// Creating a buttonsDigit object that contains references to all buttons except = and clear button
 
-let buttonsDigit = document.querySelectorAll('.digit');
+let buttons = document.querySelectorAll('.displaybtn');
 
-buttonsDigit = Array.from(buttonsDigit);  // now buttonsDigits is a true Array
+buttons = Array.from(buttons);  // now buttonsDigits is a true Array
 
-buttonsDigit = buttonsDigit.reduce((acc, button) => {
+buttons = buttons.reduce((acc, button) => {
         acc[button.id] = button;
 
         return acc;
@@ -66,11 +66,12 @@ const display = document.querySelector('.display');
 
 let totalNumber;
 
-for(let button in buttonsDigit) {
-    buttonsDigit[button].addEventListener('click', () => {
-        display.textContent += buttonsDigit[button].textContent;
+for(let button in buttons) {
+    buttons[button].addEventListener('click', () => {
+        display.textContent += buttons[button].textContent;
 
         totalNumber = display.textContent;
     });
 }
+
 
