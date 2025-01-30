@@ -1,12 +1,6 @@
 let num1;
 let num2;
 
-let add = '+';
-let subtract = '-';
-let multiply = '*';
-let divide = '/';
-
-
 // Starting operating functions
 
 function addition(num1, num2) {
@@ -64,7 +58,11 @@ const display = document.querySelector('.display');
 
 for(let button in buttonsDigit) {
     buttonsDigit[button].addEventListener('click', () => {
-        num1 = display.textContent += buttonsDigit[button].textContent;
+        if(!operator) {
+            num1 = display.textContent += buttonsDigit[button].textContent;
+        } else {
+            num2 = display.textContent += buttonsDigit[button].textContent;
+        }
     });
 }
 
@@ -81,4 +79,17 @@ buttonsSymbol = buttonsSymbol.reduce((acc, button) => {
 
         return acc;
 }, {});
+
+
+let operator;
+
+for(let button in buttonsSymbol) {
+    buttonsSymbol[button].addEventListener('click', () => {
+        operator = buttonsSymbol[button].textContent;
+        display.textContent = '';
+    });
+}
+
+
+
 
