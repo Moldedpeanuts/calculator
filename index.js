@@ -1,6 +1,12 @@
 let num1;
 let num2;
 
+let add = '+';
+let subtract = '-';
+let divide = '/'; 
+let multiply = '*';
+
+
 // Starting operating functions
 
 function addition(num1, num2) {
@@ -91,5 +97,10 @@ for(let button in buttonsSymbol) {
 }
 
 
+// Calling operate
 
+let assign = document.querySelector('.assign');
 
+assign.addEventListener('click', () => {
+    
+})
