@@ -1,4 +1,4 @@
-let num1;  // declared globally to access later
+let num1;
 let num2;
 
 let add = '+';
@@ -7,6 +7,7 @@ let multiply = '*';
 let divide = '/';
 
 
+// Starting operating functions
 
 function addition(num1, num2) {
     return num1 + num2;
@@ -45,33 +46,29 @@ function operate(num1, num2, operator) {
 
 
 
-// Creating a buttonsDigit object that contains references to all buttons except = and clear button
 
-let buttons = document.querySelectorAll('.displaybtn');
 
-buttons = Array.from(buttons);  // now buttonsDigits is a true Array
+// Digit Buttons logic: role only to append number content to display
 
-buttons = buttons.reduce((acc, button) => {
+let buttonsDigit = document.querySelectorAll('.digit');
+
+buttonsDigit = Array.from(buttonsDigit);  // now buttonsDigits is a true Array
+
+buttonsDigit = buttonsDigit.reduce((acc, button) => {
         acc[button.id] = button;
 
         return acc;
 }, {});
 
-
-// Creating a link to display div
-
 const display = document.querySelector('.display');
 
-// loop over object and attach Event Listeners to each digit button
-
-let totalNumber;
-
-for(let button in buttons) {
-    buttons[button].addEventListener('click', () => {
-        display.textContent += buttons[button].textContent;
-
-        totalNumber = display.textContent;
+for(let button in buttonsDigit) {
+    buttonsDigit[button].addEventListener('click', () => {
+        num1 = display.textContent += buttonsDigit[button].textContent;
     });
 }
 
+
+
+// Symbol buttons logic: handling operations between numbers
 
