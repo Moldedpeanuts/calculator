@@ -71,6 +71,7 @@ for(let button in buttonsDigit) {
             num1 = display.textContent;
         }
         if(operator && !result) {
+            display.textContent = '';
             display.textContent += buttonsDigit[button].textContent;
             num2 = display.textContent;
         }
@@ -103,7 +104,6 @@ for(let button in buttonsSymbol) {
     buttonsSymbol[button].addEventListener('click', () => {
         operator = buttonsSymbol[button].textContent;
         display.textContent = operator;
-        display.textContent = '';    // emptying display after user clicks operator button
     });
 }
 
