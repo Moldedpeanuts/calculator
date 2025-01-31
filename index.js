@@ -79,6 +79,7 @@ for(let button in buttonsDigit) {
             display.textContent = '';
             display.textContent += buttonsDigit[button].textContent;
             num1 = display.textContent;
+            result = null;   // reset result so it doesn't concatenate with the next digit number
         }
     });
 }
