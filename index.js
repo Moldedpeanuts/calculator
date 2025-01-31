@@ -71,7 +71,9 @@ for(let button in buttonsDigit) {
             num1 = display.textContent;
         }
         if(operator && !result) {
-            display.textContent = '';
+            if(display.textContent == operator) {
+                display.textContent = '';   // empty display if it has the text of an operator button
+            } 
             display.textContent += buttonsDigit[button].textContent;
             num2 = display.textContent;
         }
