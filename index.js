@@ -67,12 +67,12 @@ const display = document.querySelector('.display');
 for(let button in buttonsDigit) {
     buttonsDigit[button].addEventListener('click', () => {
         if(!operator && !result) {
-            num1 = buttonsDigit[button].textContent;
-            display.textContent += num1;
+            display.textContent += buttonsDigit[button].textContent;
+            num1 = display.textContent;
         }
         if(operator && !result) {
-            num2 = buttonsDigit[button].textContent;
-            display.textContent = num2;
+            display.textContent += buttonsDigit[button].textContent;
+            num2 = display.textContent;
         }
 
     });
@@ -99,6 +99,7 @@ for(let button in buttonsSymbol) {
     buttonsSymbol[button].addEventListener('click', () => {
         operator = buttonsSymbol[button].textContent;
         display.textContent = operator;
+        display.textContent = '';    // emptying display after user clicks operator button
     });
 }
 
