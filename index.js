@@ -74,7 +74,11 @@ for(let button in buttonsDigit) {
             display.textContent += buttonsDigit[button].textContent;
             num2 = display.textContent;
         }
-
+        if(operator && result) {
+            display.textContent = '';
+            display.textContent += buttonsDigit[button].textContent;
+            num1 = display.textContent;
+        }
     });
 }
 
