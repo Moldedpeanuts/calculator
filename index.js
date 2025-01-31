@@ -24,7 +24,7 @@ function multiplication(num1, num2) {
 }
 
 function division(num1, num2) {
-    if(num2 === 0) {
+    if(num2 === '0') {
         return "LOL";
     }
     return num1 / num2;
@@ -60,25 +60,24 @@ buttonsDigit = buttonsDigit.reduce((acc, button) => {
         acc[button.id] = button;
 
         return acc;
-}, {});
+}, {});   // buttonsDigit object with digit buttons Nodes
 
 const display = document.querySelector('.display');
 
 for(let button in buttonsDigit) {
     buttonsDigit[button].addEventListener('click', () => {
-        if(!operator) {
-            num1 = display.textContent += buttonsDigit[button].textContent;
-        } else {
-            num2 = display.textContent += buttonsDigit[button].textContent;
+        if(!operator && !result) {
+            num1 = buttonsDigit[button].textContent;
+            display.textContent = num1;
         }
     });
 }
 
 
 
-// Symbol buttons logic: handling operations between numbers
+// Operator buttons logic: handling operations between numbers
 
-let buttonsSymbol = document.querySelectorAll('.symbol');
+let buttonsSymbol = document.querySelectorAll('.operator');
 
 buttonsSymbol = Array.from(buttonsSymbol); // convert NodeList to true Array
 
@@ -94,7 +93,7 @@ let operator;
 for(let button in buttonsSymbol) {
     buttonsSymbol[button].addEventListener('click', () => {
         operator = buttonsSymbol[button].textContent;
-        display.textContent = '';
+        display.textContent = operator;
     });
 }
 
