@@ -10,7 +10,9 @@ let multiply = '*';
 // Starting operating functions
 
 function addition(num1, num2) {
-    return num1 + num2;
+    num1 = Number(num1);
+    num2 = Number(num2);
+    return (num1 + num2);
 }
 
 function subtraction(num1, num2) {
@@ -101,6 +103,10 @@ for(let button in buttonsSymbol) {
 
 let assign = document.querySelector('.assign');
 
+
+let result;
+
 assign.addEventListener('click', () => {
-    
-})
+    result = operate(num1, num2, operator);
+    display.textContent = result;
+});
