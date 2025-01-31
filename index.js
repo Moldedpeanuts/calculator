@@ -68,8 +68,13 @@ for(let button in buttonsDigit) {
     buttonsDigit[button].addEventListener('click', () => {
         if(!operator && !result) {
             num1 = buttonsDigit[button].textContent;
-            display.textContent = num1;
+            display.textContent += num1;
         }
+        if(operator && !result) {
+            num2 = buttonsDigit[button].textContent;
+            display.textContent = num2;
+        }
+
     });
 }
 
