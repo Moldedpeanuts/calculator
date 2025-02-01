@@ -62,20 +62,22 @@ buttonsDigit = buttonsDigit.reduce((acc, button) => {
         return acc;
 }, {});   // buttonsDigit object with digit buttons Nodes
 
+
 const display = document.querySelector('.display');
+
 
 for(let button in buttonsDigit) {
     buttonsDigit[button].addEventListener('click', () => {
         if(!operator && !result) {
             display.textContent += buttonsDigit[button].textContent;
-            num1 = display.textContent;
+            num1 = display.textContent;          // works
         }
         if(operator && !result) {
-            if(display.textContent == operator) {
+            if(display.textContent === operator) {
                 display.textContent = '';   // empty display if it has the text of an operator button
             } 
             display.textContent += buttonsDigit[button].textContent;
-            num2 = display.textContent;
+            num2 = display.textContent;   // works
         }
         if(operator && result) {
             display.textContent = '';
