@@ -63,7 +63,7 @@ const display = document.querySelector('.display');
 
 for(let button in buttonsDigit) {
     buttonsDigit[button].addEventListener('click', () => {
-        if(!operator && !result) {
+        if(operator === undefined && result === undefined) {
             display.textContent += buttonsDigit[button].textContent;
             num1 = display.textContent;          // works
         }
@@ -75,9 +75,7 @@ for(let button in buttonsDigit) {
             num2 = display.textContent;   // works
         }
         if(operator && result === null) {
-            num1 = result;
-            display.textContent += buttonsDigit[button].textContent;
-            num2 = display.textContent;
+            num2 += display.textContent;
         }
     });
 }
@@ -116,7 +114,8 @@ let result;
 assign.addEventListener('click', () => {
     result = operate(num1, num2, operator);
     display.textContent = result;
-    if(operator && result) {
-        result = null;
+    result = null;
+    if(operator && result === null) {
+        num1 = result;
     }
 });
