@@ -65,7 +65,7 @@ for(let button in buttonsDigit) {
     buttonsDigit[button].addEventListener('click', () => {
         if(operator === undefined && result === undefined) {
             display.textContent += buttonsDigit[button].textContent;
-            num1 = display.textContent;          // works
+            num1 = display.textContent;          // first round of calculations, both operator and result are undefined
         }
         if(operator && !result) {
             if(display.textContent === operator) {
