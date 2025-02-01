@@ -47,9 +47,6 @@ function operate(num1, num2, operator) {
 }
 
 
-
-
-
 // Digit Buttons logic: role only to append number content to display
 
 let buttonsDigit = document.querySelectorAll('.digit');
@@ -84,10 +81,9 @@ for(let button in buttonsDigit) {
             display.textContent += buttonsDigit[button].textContent;
             num1 = display.textContent;
             result = null;   // reset result so it doesn't concatenate with the next digit number
-        }
+        }                    // bug, num1 and num2 get assigned incorrect digits
     });
 }
-
 
 
 // Operator buttons logic: handling operations between numbers
