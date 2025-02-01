@@ -76,12 +76,11 @@ for(let button in buttonsDigit) {
             display.textContent += buttonsDigit[button].textContent;
             num2 = display.textContent;   // works
         }
-        if(operator && result) {
-            display.textContent = '';  // keep it to empty display text content
-            display.textContent += buttonsDigit[button].textContent;
-            num1 = display.textContent; 
-            result = null;   // reset result so it doesn't concatenate with the next digit number
-        }                    // bug, num1 and num2 get assigned incorrect digits
+    
+        display.textContent = '';
+        display.textContent += buttonsDigit[button].textContent;
+        num1 = display.textContent; 
+        result = null;   
     });
 }
 
@@ -105,7 +104,6 @@ for(let button in buttonsSymbol) {
     buttonsSymbol[button].addEventListener('click', () => {
         operator = buttonsSymbol[button].textContent;
         display.textContent = operator;
-        operator = null;  // operator is waiting for new value, between old one and new one.
     });
 }
 
@@ -120,4 +118,5 @@ let result;
 assign.addEventListener('click', () => {
     result = operate(num1, num2, operator);
     display.textContent = result;
+    
 });
