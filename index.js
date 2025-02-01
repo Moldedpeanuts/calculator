@@ -10,7 +10,7 @@ let multiply = '*';
 // Starting operating functions
 
 function addition(num1, num2) {
-    return Number(num1 + num2);
+    return (+num1 + +num2);
 }
 
 function subtraction(num1, num2) {
