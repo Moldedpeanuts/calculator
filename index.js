@@ -10,9 +10,7 @@ let multiply = '*';
 // Starting operating functions
 
 function addition(num1, num2) {
-    num1 = Number(num1);
-    num2 = Number(num2);
-    return (num1 + num2);
+    return Number(num1 + num2);
 }
 
 function subtraction(num1, num2) {
@@ -76,11 +74,11 @@ for(let button in buttonsDigit) {
             display.textContent += buttonsDigit[button].textContent;
             num2 = display.textContent;   // works
         }
-    
-        display.textContent = '';
-        display.textContent += buttonsDigit[button].textContent;
-        num1 = display.textContent; 
-        result = null;   
+        if(operator && result === null) {
+            num1 = result;
+            display.textContent += buttonsDigit[button].textContent;
+            num2 = display.textContent;
+        }
     });
 }
 
@@ -118,5 +116,7 @@ let result;
 assign.addEventListener('click', () => {
     result = operate(num1, num2, operator);
     display.textContent = result;
-    
+    if(operator && result) {
+        result = null;
+    }
 });
