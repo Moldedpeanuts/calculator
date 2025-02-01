@@ -74,7 +74,6 @@ for(let button in buttonsDigit) {
             display.textContent += buttonsDigit[button].textContent;
             num2 = display.textContent;   // works
         }
-
         
     });
 }
@@ -115,7 +114,4 @@ assign.addEventListener('click', () => {
     display.textContent = result;
     result = null;
     operator = null;
-    if(operator && result === null) {
-        num1 = result;
-    }
 });
