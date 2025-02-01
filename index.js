@@ -67,16 +67,15 @@ for(let button in buttonsDigit) {
             display.textContent += buttonsDigit[button].textContent;
             num1 = display.textContent;          // first round of calculations, both operator and result are undefined
         }
-        if(operator && !result) {
+        if(operator && result === undefined ) {
             if(display.textContent === operator) {
                 display.textContent = '';   // empty display if it has the text of an operator button
             } 
             display.textContent += buttonsDigit[button].textContent;
             num2 = display.textContent;   // works
         }
-        if(operator && result === null) {
-            num2 += display.textContent;
-        }
+
+        
     });
 }
 
@@ -115,6 +114,7 @@ assign.addEventListener('click', () => {
     result = operate(num1, num2, operator);
     display.textContent = result;
     result = null;
+    operator = null;
     if(operator && result === null) {
         num1 = result;
     }
